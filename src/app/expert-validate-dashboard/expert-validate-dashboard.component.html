@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<!------ Include the above in your HEAD tag ---------->
+<app-navbar></app-navbar>
+
+<div class="jumbotron">
+<div class="card text-center col-sm-4" style="width: auto;padding-top: 10px;align-content: center;margin: auto  ">
+	<div class="card-header" style="width: auto;color: brown" >
+	  Data to be validated
+	</div>
+	<div class="card-body">
+	  <h5 class="card-title text-center" style="color: black">Domain</h5>
+    <div id="clear" *ngIf="collapsed">
+	  <div *ngFor="let domaindata of domaindata" style="color: black">
+
+		<p class="card-text" style="color: black"><span class="text-uppercase" style="color: black">{{domaindata.key}} </span> :  {{domaindata.value}}</p>
+	  </div>
+    </div>
+	  <button class="edit" mat-raised-button color="primary" (click)="openDialog()" style="margin-right: 5px;">edit<span class="glyphicon glyphicon-pencil"></span></button>
+
+	  <button class="clear" mat-raised-button color="primary" (click)="clearAll()" style="margin-left: 5px;">clear<span class="glyphicon glyphicon-pencil"></span></button>
+
+	</div>
+  </div>
+
+</div>
+<div class="foot">
+  <app-footer></app-footer>
+</div>

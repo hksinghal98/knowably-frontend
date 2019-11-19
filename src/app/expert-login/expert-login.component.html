@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<form #login="ngForm" (ngSubmit)= loginExpert(login.value)>
+	<div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+					<input class="text email" type="email" name="name" placeholder="Email" required="" ngModel>
+					<input class="text" type="password" name="password" placeholder="Password" required="" ngModel>
+					<!-- <input type="submit" value="SIGNUP"> -->
+					<button type="submit" class="button btn-success " style="font-size: larger; font-weight: bold" >Login</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<app-footer></app-footer>
